@@ -1,5 +1,5 @@
 # conda-boxes
-An CLI to manage Conda environments as volumes or "Boxes"
+A Kubernetes Controller  CLI to manage Conda environments as volumes or "Boxes"
 that can be mounted to Pods inside Kubernetes. 
 
 ### Usage:
