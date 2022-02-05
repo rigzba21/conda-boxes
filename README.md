@@ -1,4 +1,5 @@
 # conda-boxes
-A Kubernetes Controller to dynamically manage Conda environments as volumes or "Boxes".
+A Kubernetes Controller to dynamically manage Conda environments as volumes or "Boxes"
+that can be mounted to Pods. 
 
 
