@@ -1,0 +1,9 @@
+name: conda-boxes
+channels:
+  - conda-forge
+dependencies:
+  - go=1.17.6
+  - go-cgo
+  - compilers
+variables:
+  GO111MODULE: auto
