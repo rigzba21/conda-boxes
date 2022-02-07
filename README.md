@@ -1,7 +1,18 @@
 # conda-boxes
-A Kubernetes Controller  CLI to manage Conda environments as volumes or "Boxes"
-that can be mounted to Pods inside Kubernetes. 
+A Kubernetes Controller and CLI to manage [Conda environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-file-manually)
+as volumes or "Boxes" that can be mounted to Pods inside Kubernetes. 
+
+⚠️ This project is a _Work-In-Progress Experiment + Proof-Of-Concept!_ ⚠️
+
+When [building custom Singleuser Jupyter Notebook Containers](https://zero-to-jupyterhub.readthedocs.io/en/latest/jupyterhub/customizing/user-environment.html#customize-an-existing-docker-image)
+Conda environments with a large number of dependencies not only increases container build time, but can significantly increase spawn time 
+during scheduling, particularly if the container has not been pulled to the node running the Pod. 
+
+The idea with `conda-boxes` is to manage Conda environments outside of the container build and mount them as volumes during Singleuser Pod scheduling.
+
 
 ### Usage:
+
+CLI:
 `conda-boxes --kubeconfig <PATH_TO_MY_KUBECONFIG> --environment <PATH_TO_MY_CONDA_ENV_FILE>`
 
