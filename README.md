@@ -13,6 +13,11 @@ The idea with `conda-boxes` is to manage Conda environments outside of the conta
 
 ### Usage:
 
-CLI:
-`conda-boxes --kubeconfig <PATH_TO_MY_KUBECONFIG> --environment <PATH_TO_MY_CONDA_ENV_FILE>`
+>🤔 maybe this would be better as a 
+[`krew plugin`](https://krew.sigs.k8s.io/docs/developer-guide/develop/plugin-development/)...
+
+```bash
+kubectl conda-box my-conda-environment.yaml
+```
+
 
