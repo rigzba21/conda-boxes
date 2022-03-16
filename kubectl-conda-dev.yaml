@@ -1,8 +1,9 @@
-name: conda-boxes
+# a conda environment file for local development
+name: kubectl-conda-dev
 channels:
   - conda-forge
 dependencies:
-  - go=1.17.6
+  - go=1.17.8
   - go-cgo
   - compilers
 variables:
