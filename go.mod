@@ -1,4 +1,4 @@
-module github.com/rigzba21/conda-boxes
+module github.com/rigzba21/kubectl-conda
 
 go 1.17
 
