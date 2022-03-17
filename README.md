@@ -7,8 +7,10 @@ as volumes in Kubernetes
 ### Usage:
 
 ```bash
-# tentative usage...
-kubectl conda -f my-conda-environment.yaml
-```
+# build it
+go build cmd/kubectl-conda.go
 
+# tentative usage...
+./kubectl-conda create my-conda-environment.yaml
+```
 
