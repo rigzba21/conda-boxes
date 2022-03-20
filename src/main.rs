@@ -1,5 +1,15 @@
-//use tokio::io::{AsyncReadExt, AsyncWriteExt};
-use kube_client::{Client};
+use kube_client::{Client, CustomResourceExt};
+use schemars::JsonSchema;
+use serde::{Deserialize, Serialize};
+use k8s_openapi::serde_json::json;
+use kube::CustomResource;
+
+#[derive(CustomResource, Clone, Debug, Deserialize, Serialize, JsonSchema)]
+#[kube(group = "rigzba21.k8sconda.io", version = "v1", kind = "CondaEnvironment", namespaced)]
+struct CondaEnvSpec {
+    name: String,    
+    info: String,
+}
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
