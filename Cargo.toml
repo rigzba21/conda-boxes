@@ -2,7 +2,6 @@
 name = "kubectl-conda"
 version = "0.1.0"
 edition = "2021"
-decription = "Kubernetes + Conda = Manage Conda Environments as K8S Volumes"
 authors = ["Jon Velando <rigzba21>"]
 license-file = "LICENSE"
 repository = "https://github.com/rigzba21/kubectl-conda"
@@ -13,3 +12,5 @@ readme = "README.md"
 [dependencies]
 kube = { version = "0.69.1", features = ["runtime", "derive"] }
 k8s-openapi = { version = "0.14.0", features = ["v1_22"] }
+kube-client = "0.70.0"
+tokio = { version = "1.17.0", features = ["full"] }
